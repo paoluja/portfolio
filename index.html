@@ -1,18 +1,21 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pao Luja – Art Portfolio</title>
+  <meta name="description" content="Pao's 3D art and game projects.">
+  <title>Pao — 3D Artist</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <header>
-    <h1>Pao</h1>
-    <p class="tagline">3D Artist</p>
+  <header class="site-header">
+    <a class="site-name" href="#">pao<span>.</span></a>
+
     <nav>
-      <a href="#art">Portfolio</a>
+      <a href="#work">Work</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -20,91 +23,110 @@
 
   <main>
 
-    <section id="art">
-      <h2>Art</h2>
+    <!-- INTRO -->
+    <section class="intro">
+      <p class="eyebrow">3D ARTIST · GAME DEVELOPMENT</p>
+      <h1>Making things<br>for imaginary worlds.</h1>
+      <p class="intro-text">
+        A collection of 3D art, game projects, and other things
+        I've made along the way.
+      </p>
+    </section>
+
+    <!-- WORK -->
+    <section id="work" class="work-section">
+      <div class="section-heading">
+        <h2>Selected work</h2>
+        <p>A few things I've been working on.</p>
+      </div>
+
       <div class="portfolio-grid">
 
         <a class="art-card" href="my-game/">
-          <img src="images/my-game.png" alt="Screenshot of My Game">
-          <h3>My Game</h3>
-          <p>A one-line description.</p>
+          <div class="art-image">
+            <img src="images/my-game.png" alt="Screenshot of My Game">
+          </div>
+          <div class="art-info">
+            <h3>My Game</h3>
+            <p>Game project · 3D art</p>
+          </div>
         </a>
 
-        <a class="art-card" href="https://www.artstation.com/paolab">
-          <img src="images/artstation.png" alt="ArtStation">
-          <h3>ArtStation</h3>
-          <p>A one-line description.</p>
+        <a class="art-card" href="https://www.artstation.com/paolab" target="_blank" rel="noopener noreferrer">
+          <div class="art-image">
+            <img src="images/artstation.png" alt="ArtStation artwork preview">
+          </div>
+          <div class="art-info">
+            <h3>More work</h3>
+            <p>Additional projects and experiments</p>
+          </div>
         </a>
 
       </div>
     </section>
 
-    <section id="about">
+    <!-- ABOUT -->
+    <section id="about" class="about-section">
+      <p class="eyebrow">A LITTLE ABOUT ME</p>
       <h2>About</h2>
-      <p>3D Artist focused on 3D modeling.</p>
+      <div class="about-content">
+        <p>
+          I'm a 3D artist interested in creating props, environments,
+          and visual worlds for games.
+        </p>
+        <p>
+          This is where I collect some of my projects, experiments,
+          and things I've enjoyed making.
+        </p>
+      </div>
     </section>
 
-   
+    <!-- CONTACT -->
+    <section id="contact" class="contact-section">
+      <p class="eyebrow">SAY HELLO</p>
+      <h2>Get in touch.</h2>
+      <p class="contact-intro">
+        Have a question or an interesting project in mind?
+        Drop me a message.
+      </p>
 
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="form-row">
+          <input
+            type="text"
+            name="name"
+            placeholder="Your name"
+            aria-label="Your name"
+            required
+          >
+          <input
+            type="email"
+            name="email"
+            placeholder="Your email"
+            aria-label="Your email"
+            required
+          >
+        </div>
 
-<section id="contact" class="contact-section">
-
-  <div class="contact-content">
-    <h2>Get in touch</h2>
-
-    <p class="contact-intro">
-      Have a question or an interesting project in mind?
-      Drop me a message.
-    </p>
-
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-
-      <div class="form-row">
-        <input
-          type="text"
-          name="name"
-          placeholder="Your name"
-          aria-label="Your name"
+        <textarea
+          name="message"
+          placeholder="Your message..."
+          aria-label="Your message"
+          rows="4"
           required
-        >
+        ></textarea>
 
-        <input
-          type="email"
-          name="email"
-          placeholder="Your email"
-          aria-label="Your email"
-          required
-        >
-      </div>
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
 
-      <textarea
-        name="message"
-        placeholder="Your message..."
-        aria-label="Your message"
-        rows="4"
-        required
-      ></textarea>
-
-      <input
-        type="text"
-        name="_gotcha"
-        style="display:none"
-        tabindex="-1"
-        autocomplete="off"
-      >
-
-      <button type="submit">Send message ↗</button>
-
-    </form>
-  </div>
-
-</section>
-
+        <button type="submit">Send message ↗</button>
+      </form>
+    </section>
 
   </main>
 
   <footer>
-    <p>pao© 2026</p>
+    <p>pao © 2026</p>
+    <a href="#">Back to top ↑</a>
   </footer>
 
 </body>
