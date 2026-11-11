@@ -45,49 +45,58 @@
     </section>
 
    
-<section class="contact-section" id="contact">
 
-    <div class="contact-box">
-        <h2>Get in touch</h2>
-        <p>Have a project in mind or just want to say hello?
-           I'd love to hear from you.</p>
 
-        <form action="https://formspree.io/f/YOUR_FORM_ID"
-              method="POST">
+<section id="contact" class="contact-section">
 
-            <input
-                type="text"
-                name="name"
-                placeholder="Your name"
-                required
-            >
+  <div class="contact-content">
+    <h2>Get in touch</h2>
 
-            <input
-                type="email"
-                name="email"
-                placeholder="Your email"
-                required
-            >
+    <p class="contact-intro">
+      Have a question or an interesting project in mind?
+      Drop me a message.
+    </p>
 
-            <textarea
-                name="message"
-                placeholder="Your message..."
-                rows="5"
-                required
-            ></textarea>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
 
-            <input
-                type="text"
-                name="_gotcha"
-                style="display:none"
-                tabindex="-1"
-                autocomplete="off"
-            >
+      <div class="form-row">
+        <input
+          type="text"
+          name="name"
+          placeholder="Your name"
+          aria-label="Your name"
+          required
+        >
 
-            <button type="submit">Send message →</button>
+        <input
+          type="email"
+          name="email"
+          placeholder="Your email"
+          aria-label="Your email"
+          required
+        >
+      </div>
 
-        </form>
-    </div>
+      <textarea
+        name="message"
+        placeholder="Your message..."
+        aria-label="Your message"
+        rows="4"
+        required
+      ></textarea>
+
+      <input
+        type="text"
+        name="_gotcha"
+        style="display:none"
+        tabindex="-1"
+        autocomplete="off"
+      >
+
+      <button type="submit">Send message ↗</button>
+
+    </form>
+  </div>
 
 </section>
 
