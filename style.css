@@ -353,3 +353,36 @@ footer a:hover {
     gap: 0.5rem;
   }
 }
+
+/* PIXEL TYPOGRAPHY */
+
+.site-name,
+nav a,
+.eyebrow,
+.intro h1,
+h2,
+.art-info h3,
+.contact-section button,
+footer {
+  font-family: "Silkscreen", monospace;
+}
+
+.intro h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+h2 {
+  font-size: 1.4rem;
+  line-height: 1.7;
+}
+
+.art-info h3 {
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.eyebrow {
+  font-size: 0.65rem;
+}
