@@ -1,5 +1,7 @@
 
-/* GENERAL */
+/* =================================
+   GENERAL
+================================= */
 
 * {
   box-sizing: border-box;
@@ -12,31 +14,39 @@ html {
 body {
   margin: 0;
   font-family: Verdana, Arial, sans-serif;
-  line-height: 1.6;
-  color: #f5f0ff;
-  background-color: #11111b;
-  background-image:
-    radial-gradient(#343047 1px, transparent 1px);
-  background-size: 22px 22px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #d5e9e7;
+  background-color: #102323;
+  background-image: radial-gradient(#244342 1px, transparent 1px);
+  background-size: 18px 18px;
 }
 
 a {
-  color: #00e5ff;
+  color: #75d8ce;
 }
 
-/* HEADER */
+::selection {
+  color: #102323;
+  background: #75d8ce;
+}
+
+/* =================================
+   HEADER
+================================= */
 
 .site-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.25rem 6%;
-  background: #191827;
-  border-bottom: 2px solid #f72585;
+  padding: 1rem max(5%, calc((100% - 1050px) / 2));
+  background: #0b191b;
+  border-bottom: 2px solid #3d9990;
 }
 
 .site-name {
-  color: #f72585;
+  color: #a0e8df;
+  font-family: "Courier New", monospace;
   font-size: 1.8rem;
   font-weight: bold;
   text-decoration: none;
@@ -44,7 +54,7 @@ a {
 }
 
 .site-name span {
-  color: #00e5ff;
+  color: #e4a6b5;
 }
 
 nav {
@@ -53,103 +63,113 @@ nav {
 }
 
 nav a {
-  color: #f5f0ff;
+  color: #b8d9d5;
+  font-family: "Courier New", monospace;
+  font-size: 0.9rem;
   text-decoration: none;
-  font-size: 0.85rem;
-  font-weight: bold;
-  text-transform: uppercase;
+  text-transform: lowercase;
 }
 
 nav a:hover {
-  color: #f72585;
+  color: #75d8ce;
   text-decoration: underline;
 }
 
-/* MAIN LAYOUT */
+/* =================================
+   MAIN LAYOUT
+================================= */
 
 main {
-  max-width: 1100px;
+  max-width: 1050px;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
 section {
-  padding: 4rem 0;
+  padding: 3.5rem 0;
 }
 
-/* INTRO */
+/* =================================
+   INTRO
+================================= */
 
 .intro {
-  padding: 6rem 0 5rem;
-  border-bottom: 1px dashed #5c5675;
+  padding: 5rem 0 4rem;
+  border-bottom: 1px dashed #47716d;
 }
 
 .eyebrow {
-  color: #b7ff00;
+  color: #e4a6b5;
   font-family: "Courier New", monospace;
   font-size: 0.8rem;
-  font-weight: bold;
   letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .intro h1 {
-  color: #ffffff;
-  font-size: clamp(2.8rem, 7vw, 5.5rem);
-  line-height: 1.05;
-  letter-spacing: -3px;
   margin: 1rem 0;
-  text-shadow: 3px 3px 0 #f72585;
+  color: #a0e8df;
+  font-family: "Courier New", monospace;
+  font-size: clamp(2.7rem, 7vw, 5rem);
+  line-height: 1.08;
+  letter-spacing: -3px;
 }
 
 .intro-text {
   max-width: 480px;
-  color: #c6c0d9;
+  color: #b8d0cc;
   font-size: 1rem;
 }
 
-/* SECTION HEADINGS */
+/* =================================
+   SECTION HEADINGS
+================================= */
+
+h2 {
+  margin: 0 0 0.5rem;
+  color: #a0e8df;
+  font-family: "Courier New", monospace;
+  font-size: 1.8rem;
+}
 
 .section-heading {
   margin-bottom: 2rem;
 }
 
-h2 {
-  color: #00e5ff;
-  font-size: 2rem;
-  margin: 0 0 0.5rem;
-}
-
 .section-heading p {
-  color: #aaa3c2;
+  margin-top: 0.25rem;
+  color: #9bbab5;
 }
 
-/* PROJECT GRID */
+/* =================================
+   PROJECT GALLERY
+================================= */
 
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
 }
 
 .art-card {
   display: block;
+  padding: 0.75rem;
   color: inherit;
   text-decoration: none;
-  background: #1c1a2b;
-  border: 1px solid #49415e;
-  padding: 0.65rem;
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  background: #183332;
+  border: 1px solid #47716d;
+  transition: border-color 0.2s ease, transform 0.2s ease;
 }
 
 .art-card:hover {
-  transform: translateY(-5px);
-  border-color: #f72585;
+  border-color: #75d8ce;
+  transform: translateY(-3px);
 }
 
 .art-image {
   overflow: hidden;
-  background: #29263a;
-  border: 1px solid #49415e;
+  background: #0b191b;
+  border: 1px solid #315653;
 }
 
 .art-image img {
@@ -160,57 +180,62 @@ h2 {
   transition: transform 0.3s ease;
 }
 
-.art-card:hover img {
+.art-card:hover .art-image img {
   transform: scale(1.03);
 }
 
 .art-info {
-  padding: 0.8rem 0.35rem 0.25rem;
+  padding: 0.75rem 0.25rem 0.2rem;
 }
 
 .art-info h3 {
   margin: 0;
-  color: #f72585;
-  font-size: 1.15rem;
+  color: #a0e8df;
+  font-family: "Courier New", monospace;
+  font-size: 1.1rem;
 }
 
 .art-info p {
   margin: 0.25rem 0 0;
-  color: #aaa3c2;
+  color: #9bbab5;
   font-size: 0.85rem;
 }
 
-/* ABOUT */
+/* =================================
+   ABOUT
+================================= */
 
 .about-section {
-  border-top: 1px dashed #5c5675;
+  border-top: 1px dashed #47716d;
 }
 
 .about-content {
   max-width: 650px;
-  color: #c6c0d9;
+  color: #b8d0cc;
 }
 
 .about-content p {
   margin-bottom: 1rem;
 }
 
-/* CONTACT */
+/* =================================
+   CONTACT
+================================= */
 
 .contact-section {
-  border-top: 1px dashed #5c5675;
+  border-top: 1px dashed #47716d;
 }
 
 .contact-intro {
-  color: #c6c0d9;
   max-width: 500px;
   margin-bottom: 2rem;
+  color: #b8d0cc;
 }
 
 .contact-section form {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 1rem;
   max-width: 620px;
 }
 
@@ -223,23 +248,23 @@ h2 {
 .contact-section input,
 .contact-section textarea {
   width: 100%;
-  padding: 0.9rem;
-  border: 1px solid #49415e;
-  background: #1c1a2b;
-  color: #ffffff;
-  font: inherit;
+  padding: 0.85rem;
+  color: #e2f2ef;
+  background: #0b191b;
+  border: 1px solid #47716d;
   border-radius: 0;
+  font: inherit;
 }
 
 .contact-section input::placeholder,
 .contact-section textarea::placeholder {
-  color: #aaa3c2;
+  color: #86a9a4;
 }
 
 .contact-section input:focus,
 .contact-section textarea:focus {
-  outline: 1px solid #00e5ff;
-  border-color: #00e5ff;
+  outline: 1px solid #75d8ce;
+  border-color: #75d8ce;
 }
 
 .contact-section textarea {
@@ -248,36 +273,40 @@ h2 {
 
 .contact-section button {
   align-self: flex-start;
-  padding: 0.75rem 1.5rem;
-  border: 2px solid #f72585;
-  background: #f72585;
-  color: #ffffff;
-  font: inherit;
+  padding: 0.65rem 1.2rem;
+  color: #102323;
+  background: #75d8ce;
+  border: 1px solid #75d8ce;
+  font-family: "Courier New", monospace;
+  font-size: 0.9rem;
   font-weight: bold;
   cursor: pointer;
   transition: 0.2s ease;
 }
 
 .contact-section button:hover {
+  color: #75d8ce;
   background: transparent;
-  color: #f72585;
 }
 
-/* FOOTER */
+/* =================================
+   FOOTER
+================================= */
 
 footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 6%;
-  background: #191827;
-  border-top: 2px solid #f72585;
-  color: #aaa3c2;
-  font-size: 0.8rem;
+  padding: 1.25rem max(5%, calc((100% - 1050px) / 2));
+  color: #9bbab5;
+  background: #0b191b;
+  border-top: 2px solid #3d9990;
+  font-family: "Courier New", monospace;
+  font-size: 0.85rem;
 }
 
 footer a {
-  color: #00e5ff;
+  color: #75d8ce;
   text-decoration: none;
 }
 
@@ -285,28 +314,34 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* MOBILE */
+/* =================================
+   MOBILE
+================================= */
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .site-header {
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.75rem;
   }
 
   nav {
-    gap: 1rem;
+    gap: 1.1rem;
   }
 
   main {
-    padding: 0 1.25rem;
+    padding: 0 1.2rem;
   }
 
   .intro {
-    padding: 4rem 0;
+    padding: 3.5rem 0;
   }
 
   .intro h1 {
     letter-spacing: -2px;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
   }
 
   .form-row {
