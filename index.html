@@ -30,10 +30,10 @@
           <p>A one-line description of what the game is about.</p>
         </a>
 
-        <a class="game-card" href="https://yourname.itch.io/another-game">
-          <img src="images/another-game.png" alt="Screenshot of Another Game">
-          <h3>Another Game</h3>
-          <p>A one-line description. This card links to itch.io instead.</p>
+        <a class="art-card" href="https://www.artstation.com/paolab">
+          <img src="images/artstation.png" alt="ArtStation">
+          <h3>ArtStation</h3>
+          <p>A one-line description.</p>
         </a>
 
       </div>
@@ -44,15 +44,58 @@
       <p>3D Artist focused on 3D modeling.</p>
     </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
-    </section>
+   
+<section class="contact-section" id="contact">
+
+    <div class="contact-box">
+        <h2>Get in touch</h2>
+        <p>Have a project in mind or just want to say hello?
+           I'd love to hear from you.</p>
+
+        <form action="https://formspree.io/f/YOUR_FORM_ID"
+              method="POST">
+
+            <input
+                type="text"
+                name="name"
+                placeholder="Your name"
+                required
+            >
+
+            <input
+                type="email"
+                name="email"
+                placeholder="Your email"
+                required
+            >
+
+            <textarea
+                name="message"
+                placeholder="Your message..."
+                rows="5"
+                required
+            ></textarea>
+
+            <input
+                type="text"
+                name="_gotcha"
+                style="display:none"
+                tabindex="-1"
+                autocomplete="off"
+            >
+
+            <button type="submit">Send message →</button>
+
+        </form>
+    </div>
+
+</section>
+
 
   </main>
 
   <footer>
-    <p>© 2026 pao</p>
+    <p>pao© 2026</p>
   </footer>
 
 </body>
